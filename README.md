@@ -13,7 +13,7 @@ Official implementation of the APAI Workshop @ CVPR 2026 paper "Quality-Aware Ca
 ## Overview
 
 <p align="center">
- <img src="./teaser.svg" alt="teaser" width="100%" style="transform: scale(1.15);" />
+ <img src="./docs/teaser.svg" alt="teaser" width="100%" style="transform: scale(1.15);" />
 </p>
 
 Most existing forensic tools operate on a single image instance, overlooking a key characteristic of real-world dissemination: as viral images circulate online, multiple *near-duplicate* versions appear and lose quality due to repeated operations like recompression, resizing and cropping. 
@@ -52,14 +52,15 @@ $$\sum_{i=1}^N \hat{l}_i  > 0$$
 
 ## Code
 
-The code is available in the `code_calibration` folder, running the script `script.sh` after downloading the datasets.
+The code is available in the `code_calibration` folder, running the script `script.sh`.\
+You don't need to download the datasets to run this script, as it uses the provided CSVs.
 
 
 ## AncesTree Dataset
 
 [![AncesTree](https://img.shields.io/badge/-AncesTree-ffab03.svg?style=for-the-badge&logo=files&logoColor=ffffff)](https://github.com/grip-unina/QuAD/blob/main/datasets/AncesTree/)
 
-<center> <img src="./docs/AncesTree.svg" alt="AncesTree" width="80%" /> </center>
+<p align="center"> <img src="./docs/AncesTree.svg" alt="AncesTree" width="80%" /> </p>
 
 ***AncesTree*** is a tree of progressive degradations used to generate near-duplicate image instances. Starting from a clean image (from the source dataset of real/fake images), multiple degradation operations are applied across levels (L = 1 to L = 5). Each branch represents a sequential processing pipeline consisting of random cropping, resizing, and compression for a total of 124 near-duplicate samples for each image.
 The total number of near-duplicates is 136,400.
@@ -69,7 +70,7 @@ The total number of near-duplicates is 136,400.
 
 [![ReWIND](https://img.shields.io/badge/-ReWIND-ffab03.svg?style=for-the-badge&logo=files&logoColor=ffffff)](https://github.com/grip-unina/QuAD/blob/main/datasets/ReWIND/)
 
-<center> <img src="./docs/rewind.svg" alt="ReWIND" width="50%" /> </center>
+<p align="center"> <img src="./docs/rewind.svg" alt="ReWIND" width="50%" /> </p>
 
 ***ReWIND*** is a collection of in-the-wild real and AI-generated images that were shared on-line and became viral on social networks. The widespread circulation of these images allowed us to scrape the web to find multiple instances (*near-duplicates*) of each source image with different and unknown degradations.
 The dataset contains 162 sources (87 real / 75 fake) with at least 10 near-duplicates, for a total of 9646 instances in different formats (JPEG, WebP and PNG).
