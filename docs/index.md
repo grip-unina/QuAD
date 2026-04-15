@@ -83,10 +83,9 @@ The dataset is available [here](https://github.com/grip-unina/QuAD/blob/main/dat
 
 
 
-
 ## Results
 
-<center> <img src="./acc_comparison.svg" alt="results" width="85%" /> </center>
+<center> <img src="./number_instances.svg" alt="results" width="85%" /> </center>
 
 The left panel of the figure illustrates the effect in terms of balanced Accuracy of different ranking by quality factor, image size, and IQA scores (TReS, QCN, LoDa). All the ranking curves converge to the same point (gray star), which coincides with the naive aggregation of all 124 instances. The **orange ⋆** represents the accuracy of **QuAD**, our proposed calibrated aggregation of all 124 instances.
 It is clear that the compression quality factor and especially the image dimensions are not reliable as a ranking metric. In fact, there is no guarantee that the largest image has not been heavily processed before a final upscaling.
