@@ -46,6 +46,7 @@ To support large-scale evaluation, we also introduce two datasets: **AncesTree**
 We guide the calibration using the estimated image quality. In this way, **higher quality versions of the image have a higher influence on the final decision**, while less reliable scores have a smaller contribution.
 
 We model the behavior of the logit score $l_i$ of a near-duplicate instance as a function of the no-reference quality index $q_i$ using a **Gaussian fitting** separately for real and fake images:
+
 $$l_i \mid q_i, y=1 \sim \mathcal{N}(\mu_1(q_i), \sigma_1^2(q_i))$$
 
 $$l_i \mid q_i, y=0 \sim \mathcal{N}(\mu_0(q_i), \sigma_0^2(q_i))$$
