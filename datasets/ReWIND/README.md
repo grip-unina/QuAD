@@ -1,6 +1,6 @@
 # ReWIND Dataset
 
-<p align="center"> <img src="../docs/rewind.svg" alt="ReWIND" width="55%" /> </p>
+<p align="center"> <img src="../../docs/rewind.svg" alt="ReWIND" width="55%" /> </p>
 
 ***ReWIND*** is a collection of in-the-wild real and AI-generated images that were shared on-line and became viral on social networks. The widespread circulation of these images allowed us to scrape the web to find multiple instances (*near-duplicates*) of each source image with different and unknown degradations.
 The dataset contains 162 sources (87 real / 75 fake) with at least 10 near-duplicates, for a total of 9646 instances in different formats (JPEG, WebP and PNG).
@@ -61,7 +61,7 @@ For AMMeBa, the images can be downloaded using the links in `ammeba_urls.csv`, w
 
 After downloading, you should have a structure like this:
 ```
-data_ReWIND
+datasets/ReWIND
 ├── ReWIND
 │   ├── ammeba
 │   ├── FOSID

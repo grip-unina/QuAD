@@ -1,6 +1,6 @@
 # AncesTree Dataset
 
-<p align="center"> <img src="../docs/AncesTree.svg" alt="AncesTree" width="85%" /> </p>
+<p align="center"> <img src="../../docs/AncesTree.svg" alt="AncesTree" width="85%" /> </p>
 
 ***AncesTree*** is a tree of progressive degradations used to generate near-duplicate image instances. Starting from a clean image (from the source dataset of real/fake images), multiple degradation operations are applied across levels (L = 1 to L = 5). Each branch represents a sequential processing pipeline consisting of random cropping, resizing, and compression for a total of 124 near-duplicate samples for each image.
 The total number of near-duplicates is 136,400.
@@ -73,7 +73,7 @@ To correctly reflect the naming in the CSV, ensure that the subfolders in the `s
 
 After downloading, you should have a structure like this:
 ```
-data_AncesTree
+datasets/AncesTree
 ├── AncesTree
 │   ├── dalle2
 │   ├── dalle3
