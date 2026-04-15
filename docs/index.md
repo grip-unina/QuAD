@@ -25,7 +25,7 @@ links:
 ---
 
 <center>
- <img src="./teaser.svg" alt="teaser" width="100%" style="transform: scale(1.15);" />
+  <img src="./teaser.svg" alt="teaser" width="110%" style="transform: scale(1.15); margin-bottom: 40px; display: block;" />
 </center>
 
 
@@ -46,30 +46,20 @@ To support large-scale evaluation, we also introduce two datasets: **AncesTree**
 We guide the calibration using the estimated image quality. In this way, **higher quality versions of the image have a higher influence on the final decision**, while less reliable scores have a smaller contribution.
 
 We model the behavior of the logit score $l_i$ of a near-duplicate instance as a function of the no-reference quality index $q_i$ using a **Gaussian fitting** separately for real and fake images:
-{% raw %}
-$$
-l_i \mid q_i, y=1 \sim \mathcal{N}(\mu_1(q_i), \sigma_1^2(q_i))
-$$
-{% endraw %}
+$$l_i \mid q_i, y=1 \sim \mathcal{N}(\mu_1(q_i), \sigma_1^2(q_i))$$
 
-$$
-l_i \mid q_i, y=0 \sim \mathcal{N}(\mu_0(q_i), \sigma_0^2(q_i))
-$$
+$$l_i \mid q_i, y=0 \sim \mathcal{N}(\mu_0(q_i), \sigma_0^2(q_i))$$
 
 In other words, for each instance we have two gaussians that depend on $q_i$.
 For low-quality instances, Gaussians are expected to be closer and overlap more, resulting in a corrected logit score closer to zero and consequently reducing its contribution to the final sum.
 
 We then compute the calibrated logit score $\hat{l}_i$ of the instance as:
 
-$$
-\hat{l}_i = \frac{(l_i - \mu_0(q_i))^2}{2\sigma_0^2(q_i)} -\frac{(l_i - \mu_1(q_i))^2}{2\sigma_1^2(q_i)} +  \log\left(\frac{\sigma_o(q_i)}{\sigma_1(q_i)}\right)
-$$
+$$\hat{l}_i = \frac{(l_i - \mu_0(q_i))^2}{2\sigma_0^2(q_i)} -\frac{(l_i - \mu_1(q_i))^2}{2\sigma_1^2(q_i)} +  \log\left(\frac{\sigma_o(q_i)}{\sigma_1(q_i)}\right)$$
 
 For a query image, the final score is obtained by summing the calibrated logits of its near-duplicates. The resulting decision rule is:
 
-$$
-\sum_{i=1}^N \hat{l}_i  > 0
-$$
+$$\sum_{i=1}^N \hat{l}_i  > 0$$
 
  
 ## AncesTree Dataset
