@@ -33,7 +33,7 @@ Most existing forensic tools operate on a single image instance, overlooking a k
 As a consequence, the same image may yield inconsistent forensic predictions based on which version is analyzed.
 
 **QuAD (Quality-Aware calibration with near-Duplicates)** is a framework specifically designed to improve the detection of viral AI-generated images circulating across the web.
-It makes decisions based on all available near-duplicate versions of the same query image, aggregating calibrated scores across near-duplicates and weighting each version's contribution by its estimated quality.
+It makes decisions based on all available near-duplicate versions of the same query image, calibrating and aggregating scores across near-duplicates based on their estimated quality.
 By doing so, we take advantage of all pieces of information while accounting for the reduced reliability
 of images impaired by multiple processing steps.
 
