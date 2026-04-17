@@ -19,7 +19,7 @@ affiliations:
   - name: University Federico II of Naples, Italy
     index: 1
 links:
-    arxiv: https://arxiv.org/abs/XXXX.XXXX
+    arxiv: https://arxiv.org/abs/2604.15027
     code: https://github.com/grip-unina/QuAD
     data: https://github.com/grip-unina/QuAD/blob/main/datasets/
 ---

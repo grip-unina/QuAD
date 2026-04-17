@@ -1,7 +1,7 @@
 # QuAD
 
 [![QuAD](https://img.shields.io/badge/Project%20page-222222.svg?style=for-the-badge&logo=github)](https://grip-unina.github.io/QuAD)
-[![arXiv](https://img.shields.io/badge/-arXiv-B31B1B.svg?style=for-the-badge&logo=arXiv)](https://arxiv.org/abs/XXXX.XXXXX)
+[![arXiv](https://img.shields.io/badge/-arXiv-B31B1B.svg?style=for-the-badge&logo=arXiv)](https://arxiv.org/abs/2604.15027)
 [![AncesTree](https://img.shields.io/badge/-AncesTree-ffab03.svg?style=for-the-badge&logo=files&logoColor=ffffff)](https://github.com/grip-unina/QuAD/blob/main/datasets/AncesTree/)
 [![ReWIND](https://img.shields.io/badge/-ReWIND-ffab03.svg?style=for-the-badge&logo=files&logoColor=ffffff)](https://github.com/grip-unina/QuAD/blob/main/datasets/ReWIND/)
 <a href="https://www.grip.unina.it">
